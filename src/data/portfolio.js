@@ -80,18 +80,14 @@ export const PROJECTS_DATA = [
     featured: true,
     name: "Project Desk (MERN)",
     desc: "Full-stack role-based academic workflow system for Students, Mentors, and Heads. Features secure JWT and Google OAuth authentication, Excel-based bulk upload with MongoDB integration.",
-    tech: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Google OAuth",
-    ],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth"],
     color: "#e8ff6b",
     preview: "dashboard",
     liveUrl: "#",
     githubUrl: "https://github.com/KrishAgarwal-44/Project-Desk",
+    images: [
+      
+    ],
   },
   {
     num: "02",
@@ -102,16 +98,25 @@ export const PROJECTS_DATA = [
     preview: "editor",
     liveUrl: "#",
     githubUrl: "https://github.com/KrishAgarwal-44/Project-Management",
+    images: [
+      "/images/taskmanager-1.png",
+      "/images/taskmanager-2.png",
+      "/images/taskmanager-3.png",
+      "/images/taskmanager-4.png",
+    ],
   },
   {
     num: "03",
     name: "Online Chat Application (Spring Boot)",
-    desc: "Real-time chat system handling 1000+ messages per session with minimal latency. Features timestamp-based message ordering and optimized database queries.",
+    desc: "Real-time chat system handling 1000+ messages per session with minimal latency.",
     tech: ["Spring Boot", "Java", "WebSocket", "MySQL"],
     color: "#ff6b9d",
     preview: "chat",
     liveUrl: "#",
     githubUrl: "https://github.com/KrishAgarwal-44/Chat-Application-",
+    images: [
+      "/images/chat-image.png",
+    ],
   },
 ];
 
