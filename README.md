@@ -1,4 +1,4 @@
-# Alex Mercer — Full Stack Developer Portfolio
+# Krish Agarwal — Full Stack Developer Portfolio
 
 A professional, modern React portfolio with dark theme, animations, and clean architecture.
 
@@ -28,6 +28,7 @@ src/
 │   ├── Experience.jsx    # Timeline-style work history
 │   ├── Contact.jsx       # Contact form + social links
 │   └── Footer.jsx        # Simple footer
+│   └── DeskScene.jsx        # 3d scene
 │
 ├── data/
 │   └── portfolio.js      # ⭐ All your content lives here
