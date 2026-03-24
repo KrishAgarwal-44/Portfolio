@@ -100,7 +100,7 @@ export default function Contact() {
             {[
               {
                 label: "Email",
-                value: "agarwalkrish@1222gmail.com",
+                value: "agarwalkrish1222@gmail.com",
                 href: "mailto:agarwalkrish@1222gmail.com",
                 icon: <FaEnvelope size={20} />
               },

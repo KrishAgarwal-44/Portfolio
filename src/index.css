@@ -95,3 +95,61 @@ body::after {
   0%   { background-position: -200% center; }
   100% { background-position: 200% center; }
 }
+
+@media (max-width: 1024px) {
+  /* Slightly smaller text on tablets */
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack main sections vertically */
+  main {
+    padding: 4rem 2rem;
+  }
+
+  /* Hero section adjustments */
+  #hero h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    text-align: center;
+  }
+
+  /* Projects grid stack */
+  #projects div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact section stack */
+  #contact div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Reduce padding/margin globally */
+  section {
+    padding: 4rem 1.5rem !important;
+  }
+
+  /* Images scale to full width */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very small phones */
+  h2 {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+  }
+  h3 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+  section {
+    padding: 3rem 1rem !important;
+  }
+}
