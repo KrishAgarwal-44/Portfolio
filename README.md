@@ -22,6 +22,7 @@ src/
 ├── components/
 │   ├── Navbar.jsx        # Sticky nav with scroll-aware styling
 │   ├── Hero.jsx          # Hero with animated terminal
+│   ├── Certifications.jsx # Certification section animated         
 │   ├── About.jsx         # About section with profile card
 │   ├── Skills.jsx        # Skills grid with hover effects
 │   ├── Projects.jsx      # Featured & regular project cards
