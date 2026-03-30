@@ -7,8 +7,7 @@ export default function Skills() {
   const inView = useInView(ref);
 
   return (
-    <section id="skills" ref={ref} style={{
-      padding: '8rem 4rem',
+    <section id="skills" ref={ref} className="section-pad" style={{
       background: 'var(--bg-2)',
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -22,13 +21,14 @@ export default function Skills() {
             <SectionTag>Expertise</SectionTag>
             <h2 style={{
               fontFamily: "'Syne',sans-serif", fontWeight: 800,
-              fontSize: 'clamp(2rem,3.5vw,3rem)',
+              fontSize: 'clamp(1.8rem,3.5vw,3rem)',
               letterSpacing: '-0.03em', lineHeight: 1.05,
+              color: 'var(--text)',
             }}>
               What I{' '}
               <span style={{
                 fontStyle: 'italic',
-                WebkitTextStroke: '1px rgba(232,255,107,0.5)',
+                WebkitTextStroke: '1.5px rgba(232,255,107,0.8)',
                 color: 'transparent',
               }}>Build</span>
             </h2>
@@ -41,11 +41,8 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Grid */}
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1px', background: 'var(--border)',
-        }}>
+        {/* Responsive Grid */}
+        <div className="skills-grid">
           {SKILLS_DATA.map((skill, i) => (
             <SkillCard key={skill.name} skill={skill} delay={i * 80} inView={inView} />
           ))}
@@ -91,6 +88,7 @@ function SkillCard({ skill, delay, inView }) {
       <h3 style={{
         fontFamily: "'Syne',sans-serif", fontSize: '1rem', fontWeight: 700,
         letterSpacing: '-0.02em', marginBottom: '0.4rem',
+        color: 'var(--text)',
       }}>
         {skill.name}
       </h3>
@@ -107,8 +105,8 @@ function SkillCard({ skill, delay, inView }) {
           <span key={tag} style={{
             fontFamily: "'DM Mono',monospace", fontSize: '0.65rem',
             padding: '0.25rem 0.6rem',
-            background: hovered ? 'rgba(232,255,107,0.05)' : 'var(--bg)',
-            border: `1px solid ${hovered ? 'rgba(232,255,107,0.2)' : 'var(--border)'}`,
+            background: hovered ? 'rgba(232,255,107,0.07)' : 'var(--bg)',
+            border: `1px solid ${hovered ? 'rgba(232,255,107,0.25)' : 'var(--border)'}`,
             color: hovered ? 'var(--text-2)' : 'var(--text-3)',
             letterSpacing: '0.04em',
             transition: 'all 0.3s',

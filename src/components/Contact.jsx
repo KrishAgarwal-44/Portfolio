@@ -22,13 +22,14 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      style={{ padding: "8rem 4rem", background: "var(--bg)" }}
+      className="section-pad"
+      style={{ background: "var(--bg)" }}
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <div
           style={{
             textAlign: "center",
-            marginBottom: "5rem",
+            marginBottom: "4rem",
             opacity: inView ? 1 : 0,
             transform: inView ? "none" : "translateY(20px)",
             transition: "opacity 0.7s, transform 0.7s",
@@ -39,10 +40,11 @@ export default function Contact() {
             style={{
               fontFamily: "'Syne',sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(2.5rem,5vw,5rem)",
+              fontSize: "clamp(2rem,5vw,5rem)",
               letterSpacing: "-0.04em",
               lineHeight: 1.0,
               marginBottom: "1.5rem",
+              color: 'var(--text)',
             }}
           >
             Let's Build
@@ -50,7 +52,7 @@ export default function Contact() {
             <span
               style={{
                 fontStyle: "italic",
-                WebkitTextStroke: "1.5px rgba(232,255,107,0.45)",
+                WebkitTextStroke: "2px rgba(232,255,107,0.8)",
                 color: "transparent",
               }}
             >
@@ -73,11 +75,8 @@ export default function Contact() {
         </div>
 
         <div
+          className="contact-grid"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1.4fr",
-            gap: "4rem",
-            alignItems: "start",
             opacity: inView ? 1 : 0,
             transform: inView ? "none" : "translateY(20px)",
             transition: "opacity 0.7s 0.2s, transform 0.7s 0.2s",
@@ -92,6 +91,7 @@ export default function Contact() {
                 fontSize: "1.2rem",
                 letterSpacing: "-0.02em",
                 marginBottom: "2rem",
+                color: 'var(--text)',
               }}
             >
               Get in touch
@@ -101,20 +101,20 @@ export default function Contact() {
               {
                 label: "Email",
                 value: "agarwalkrish1222@gmail.com",
-                href: "mailto:agarwalkrish@1222gmail.com",
-                icon: <FaEnvelope size={20} />
+                href: "mailto:agarwalkrish1222@gmail.com",
+                icon: <FaEnvelope size={18} />
               },
               {
                 label: "LinkedIn",
                 value: "@Krish Agarwal",
                 href: "https://www.linkedin.com/in/krish-agarwal-",
-                icon: <FaLinkedin size={20} />,
+                icon: <FaLinkedin size={18} />,
               },
               {
                 label: "GitHub",
                 value: "@KrishAgarwal-44",
                 href: "https://github.com/KrishAgarwal-44",
-                icon: <FaGithub size={20} />,
+                icon: <FaGithub size={18} />,
               },
             ].map((item) => (
               <a
@@ -145,7 +145,7 @@ export default function Contact() {
                     alignItems: "center",
                     justifyContent: "center",
                     background: "var(--bg-2)",
-                    border: "1px solid var(--border)",
+                    border: "1px solid var(--border-2)",
                     fontSize: "1rem",
                     flexShrink: 0,
                   }}
@@ -168,7 +168,9 @@ export default function Contact() {
                   <div
                     style={{
                       fontFamily: "'DM Mono',monospace",
-                      fontSize: "0.85rem",
+                      fontSize: "0.82rem",
+                      color: 'var(--text-2)',
+                      wordBreak: 'break-all',
                     }}
                   >
                     {item.value}
@@ -192,13 +194,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}
           >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1.2rem",
-              }}
-            >
+            <div className="contact-fields-row">
               <Field
                 label="Name"
                 placeholder="John Doe"
@@ -242,7 +238,7 @@ function Field({
   const base = {
     width: "100%",
     background: "var(--bg-2)",
-    border: `1px solid ${focused ? "var(--accent)" : "var(--border)"}`,
+    border: `1px solid ${focused ? "var(--accent)" : "var(--border-2)"}`,
     color: "var(--text)",
     fontFamily: "'DM Mono',monospace",
     fontSize: "0.82rem",

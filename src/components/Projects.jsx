@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick-theme.css";
 function ProjectCard({ project, index, inView }) {
   const isFeatured = project.featured;
 
-  // Slick slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -23,6 +22,7 @@ function ProjectCard({ project, index, inView }) {
 
   return (
     <div
+      className={isFeatured ? 'featured-card' : ''}
       style={{
         background: "var(--bg-2)",
         border: `1px solid var(--border)`,
@@ -67,7 +67,9 @@ function ProjectCard({ project, index, inView }) {
             ))}
           </Slider>
         ) : (
-          <p>No screenshots</p>
+          <p style={{ color: 'var(--text-3)', fontFamily: "'DM Mono', monospace", fontSize: '0.8rem' }}>
+            No screenshots
+          </p>
         )}
 
         {/* Overlay gradient */}
@@ -106,10 +108,11 @@ function ProjectCard({ project, index, inView }) {
           style={{
             fontFamily: "'Syne',sans-serif",
             fontWeight: 700,
-            fontSize: isFeatured ? "1.7rem" : "1.25rem",
+            fontSize: isFeatured ? "clamp(1.2rem, 3vw, 1.7rem)" : "1.15rem",
             letterSpacing: "-0.02em",
             marginBottom: "0.7rem",
             lineHeight: 1.15,
+            color: 'var(--text)',
           }}
         >
           {project.name}
@@ -143,8 +146,8 @@ function ProjectCard({ project, index, inView }) {
                 fontFamily: "'DM Mono',monospace",
                 fontSize: "0.65rem",
                 padding: "0.25rem 0.65rem",
-                background: `${project.color}10`,
-                border: `1px solid ${project.color}28`,
+                background: `${project.color}15`,
+                border: `1px solid ${project.color}35`,
                 color: project.color,
                 letterSpacing: "0.04em",
               }}
@@ -154,7 +157,7 @@ function ProjectCard({ project, index, inView }) {
           ))}
         </div>
 
-        <div style={{ display: "flex", gap: "1.2rem" }}>
+        <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
           <ProjectLink href={project.liveUrl} color={project.color}>
             ↗ Live Demo
           </ProjectLink>
@@ -199,7 +202,8 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      style={{ padding: "8rem 4rem", background: "var(--bg)" }}
+      className="section-pad"
+      style={{ background: "var(--bg)" }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div
@@ -221,16 +225,17 @@ export default function Projects() {
               style={{
                 fontFamily: "'Syne',sans-serif",
                 fontWeight: 800,
-                fontSize: "clamp(2rem,3.5vw,3rem)",
+                fontSize: "clamp(1.8rem,3.5vw,3rem)",
                 letterSpacing: "-0.03em",
                 lineHeight: 1.05,
+                color: 'var(--text)',
               }}
             >
               Selected{" "}
               <span
                 style={{
                   fontStyle: "italic",
-                  WebkitTextStroke: "1px rgba(232,255,107,0.5)",
+                  WebkitTextStroke: "1.5px rgba(232,255,107,0.8)",
                   color: "transparent",
                 }}
               >
@@ -253,13 +258,7 @@ export default function Projects() {
           </a>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "1.5rem",
-          }}
-        >
+        <div className="projects-grid">
           {PROJECTS_DATA.map((project, i) => (
             <ProjectCard
               key={project.num}

@@ -7,18 +7,10 @@ export default function About() {
   const inView = useInView(ref);
 
   return (
-    <section id="about" ref={ref} style={{
-      padding: '8rem 4rem',
+    <section id="about" ref={ref} className="section-pad" style={{
       background: 'var(--bg)',
     }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1.2fr',
-        gap: '6rem',
-        alignItems: 'center',
-        maxWidth: 1200,
-        margin: '0 auto',
-      }}>
+      <div className="about-grid">
 
         {/* ── Left: Identity Card ── */}
         <div style={{
@@ -132,7 +124,7 @@ export default function About() {
                   gap: '0.5rem',
                   padding: '0.45rem 1rem',
                   background: 'rgba(232,255,107,0.08)',
-                  border: '1px solid rgba(232,255,107,0.2)',
+                  border: '1px solid rgba(232,255,107,0.3)',
                   marginTop: '0.3rem',
                 }}>
                   <span style={{
@@ -177,7 +169,7 @@ export default function About() {
           <h2 style={{
             fontFamily: "'Syne', sans-serif",
             fontWeight: 800,
-            fontSize: 'clamp(2rem, 3.5vw, 3rem)',
+            fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
             letterSpacing: '-0.03em',
             lineHeight: 1.05,
             marginBottom: '1.6rem',
@@ -186,14 +178,14 @@ export default function About() {
             {ABOUT_DATA.title[0]}{' '}
             <span style={{
               fontStyle: 'italic',
-              WebkitTextStroke: '1px rgba(232,255,107,0.55)',
+              WebkitTextStroke: '1.5px rgba(232,255,107,0.8)',
               color: 'transparent',
             }}>
               {ABOUT_DATA.title[1]}
             </span>
           </h2>
 
-          {/* Body paragraphs — improved size + spacing */}
+          {/* Body paragraphs */}
           {ABOUT_DATA.paragraphs.map((p, i) => (
             <p key={i} style={{
               fontFamily: "'Lora', serif",
@@ -224,6 +216,7 @@ export default function About() {
             gap: '1.2rem',
             alignItems: 'center',
             marginTop: '2.5rem',
+            flexWrap: 'wrap',
           }}>
             <a
               href="#contact"

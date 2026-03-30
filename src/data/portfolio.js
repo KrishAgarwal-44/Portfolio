@@ -3,7 +3,7 @@ export const HERO_DATA = {
   name: ["Krish", "Agarwal"],
   title: "Full Stack Developer",
   description:
-    "Passionate full stack developer specializing in MERN stack, Java, and data analysis. Experienced in building scalable web applications and interactive dashboards.",
+    "Full stack developer specializing in MERN stack, Java, and data analysis. Building scalable web applications, real-time systems, and interactive dashboards.",
   cta: { label: "View My Work", href: "#projects" },
   resume: {
     label: "Download CV",
@@ -20,13 +20,14 @@ export const ABOUT_DATA = {
   tag: "About Me",
   title: ["Who I", "Am"],
   paragraphs: [
-    "I'm a B.Tech CSE (Data Science) student at Swami Keshvanand Institute of Technology with a passion for full stack development and data analysis. I specialize in building efficient web applications using modern technologies.",
-    "I have hands-on experience in Java development, MERN stack projects, and data visualization with Power BI. I'm always eager to learn new technologies and contribute to impactful projects.",
+    "I'm a B.Tech CSE (Data Science) student at SKIT, Jaipur — someone who genuinely enjoys the craft of building things. Whether it's a clean REST API or a dashboard that turns messy data into clear insight, I care about the details that make software feel right.",
+    "I've worked across the full stack — from Spring Boot backends to React frontends — and spent time as a Data Analyst Intern building Power BI dashboards that actually got used. I'm not looking for easy problems. I want to work on things that matter.",
   ],
   facts: [
-    "Based in Jaipur, Raj.",
-    "B.Tech CSE (DS), SKIT - GPA: 8.03/10",
-    "Senior Secondary: 80.20%",
+    "Based in Jaipur, Rajasthan",
+    "B.Tech CSE (Data Science) — GPA 8.03",
+    "Senior Secondary — 80.20%",
+    "Open to on-site & remote roles",
   ],
 };
 
@@ -79,20 +80,18 @@ export const PROJECTS_DATA = [
     num: "01",
     featured: true,
     name: "Project Desk (MERN)",
-    desc: "Full-stack role-based academic workflow system for Students, Mentors, and Heads. Features secure JWT and Google OAuth authentication, Excel-based bulk upload with MongoDB integration.",
+    desc: "Full-stack role-based academic workflow system for Students, Mentors, and Heads. Improved project allocation efficiency by 60%. Secure authentication via JWT and Google OAuth reduced unauthorized access by 90%. Excel-based bulk upload with MongoDB cut manual processing by 70%.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth"],
     color: "#e8ff6b",
     preview: "dashboard",
     liveUrl: "#",
     githubUrl: "https://github.com/KrishAgarwal-44/Project-Desk",
-    images: [
-      
-    ],
+    images: [],
   },
   {
     num: "02",
     name: "Project Management System (MERN)",
-    desc: "Full-stack project management application with JWT authentication and role-based access control. Includes task creation, status updates, and priority-based filtering.",
+    desc: "Full-stack project management app with JWT authentication and role-based access for Admin and User. Features task creation, status updates, and priority-based filtering (Low/Medium/High). RESTful APIs built following MVC architecture.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     color: "#6bffd4",
     preview: "editor",
@@ -108,7 +107,7 @@ export const PROJECTS_DATA = [
   {
     num: "03",
     name: "Online Chat Application (Spring Boot)",
-    desc: "Real-time chat system handling 1000+ messages per session with minimal latency.",
+    desc: "Real-time chat system handling 1000+ messages per session with minimal latency. Timestamp-based message ordering for accurate conversation history. Optimized DB queries and caching reduced response time by 30%.",
     tech: ["Spring Boot", "Java", "WebSocket", "MySQL"],
     color: "#ff6b9d",
     preview: "chat",
@@ -125,15 +124,45 @@ export const EXPERIENCE_DATA = [
     role: "Data Analyst Intern",
     company: "Celebal Technologies",
     period: "June 2025 — August 2025",
-    desc: "Built interactive Power BI dashboards using DAX and Power Query, improving reporting efficiency by 30%. Performed data modeling and transformation, reducing manual effort by 25%.",
+    desc: "Built interactive Power BI dashboards using DAX and Power Query, improving reporting efficiency by 30%. Performed data modeling and transformation, reducing manual reporting effort by 25% and improving data accuracy.",
     tags: ["Power BI", "DAX", "Power Query", "Data Modeling"],
   },
   {
     role: "Java Intern",
     company: "Arootle Private Limited",
     period: "July 2024 — August 2024",
-    desc: "Developed and integrated Java modules for functional applications. Identified and resolved 10+ critical bugs, improving stability and performance.",
+    desc: "Developed and integrated Java modules for a functional application, enhancing feature efficiency. Identified and resolved 10+ critical bugs, improving application stability and performance.",
     tags: ["Java", "Bug Fixing", "Application Development"],
+  },
+];
+
+export const CERTIFICATIONS_DATA = [
+  {
+    title: "Java Foundation Course",
+    issuer: "Oracle",
+    date: "2024",
+    icon: "☕",
+    color: "#f89820",
+    credentialUrl: "#",
+    tags: ["Java", "OOP", "Core Java"],
+  },
+  {
+    title: "Cloud Infrastructure Foundations Associate",
+    issuer: "Oracle",
+    date: "2024",
+    icon: "☁️",
+    color: "#5dd8c0",
+    credentialUrl: "#",
+    tags: ["Cloud", "OCI", "Infrastructure"],
+  },
+  {
+    title: "Prompt Engineering",
+    issuer: "DeepLearning.AI",
+    date: "2024",
+    icon: "🤖",
+    color: "#e066a0",
+    credentialUrl: "#",
+    tags: ["AI", "LLMs", "Prompt Design"],
   },
 ];
 
@@ -142,4 +171,5 @@ export const NAV_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];

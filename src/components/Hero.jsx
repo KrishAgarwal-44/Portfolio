@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HERO_DATA } from "../data/portfolio";
 import DeskScene from "./DeskScene";
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   return (
     <section
+      className="hero-grid"
       style={{
         minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: "1fr 1.1fr",
         alignItems: "center",
-        padding: "0 4rem",
-        gap: "2rem",
         position: "relative",
         overflow: "hidden",
       }}
@@ -47,7 +53,7 @@ export default function Hero() {
             color: "var(--accent)",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
-            marginBottom: "2rem",
+            marginBottom: "1.5rem",
             animation: "fadeUp 0.8s 0.2s both",
           }}
         >
@@ -84,11 +90,11 @@ export default function Hero() {
         {/* Name */}
         <h1
           style={{
-            fontSize: "clamp(3rem, 5vw, 5.2rem)",
+            fontSize: "clamp(2.5rem, 7vw, 5.2rem)",
             fontWeight: 800,
             lineHeight: 0.95,
             letterSpacing: "-0.04em",
-            marginBottom: "1.4rem",
+            marginBottom: "1.2rem",
             animation: "fadeUp 0.8s 0.35s both",
             color: "var(--text)",
           }}
@@ -99,7 +105,7 @@ export default function Hero() {
             style={{
               display: "block",
               fontStyle: "italic",
-              WebkitTextStroke: "1.5px rgba(232,255,107,0.45)",
+              WebkitTextStroke: "2px rgba(232,255,107,0.75)",
               color: "transparent",
             }}
           >
@@ -111,11 +117,11 @@ export default function Hero() {
         <p
           style={{
             fontFamily: "'Lora', serif",
-            fontSize: "1rem",
+            fontSize: "clamp(0.9rem, 2.2vw, 1rem)",
             color: "var(--text-2)",
             lineHeight: 1.85,
             maxWidth: 420,
-            marginBottom: "2rem",
+            marginBottom: "1.6rem",
             animation: "fadeUp 0.8s 0.5s both",
           }}
         >
@@ -128,7 +134,7 @@ export default function Hero() {
             display: "flex",
             gap: "0.45rem",
             flexWrap: "wrap",
-            marginBottom: "2.5rem",
+            marginBottom: "2rem",
             animation: "fadeUp 0.8s 0.58s both",
           }}
         >
@@ -145,9 +151,9 @@ export default function Hero() {
               style={{
                 fontFamily: "'DM Mono', monospace",
                 fontSize: "0.63rem",
-                color: "var(--text-3)",
+                color: "var(--text-2)",
                 padding: "0.22rem 0.6rem",
-                border: "1px solid var(--border)",
+                border: "1px solid var(--border-2)",
                 background: "var(--bg-2)",
                 letterSpacing: "0.06em",
               }}
@@ -163,6 +169,7 @@ export default function Hero() {
             display: "flex",
             gap: "1.2rem",
             alignItems: "center",
+            flexWrap: "wrap",
             animation: "fadeUp 0.8s 0.65s both",
           }}
         >
@@ -178,8 +185,9 @@ export default function Hero() {
         <div
           style={{
             display: "flex",
-            gap: "2.5rem",
-            marginTop: "3rem",
+            gap: "2rem",
+            marginTop: "2.5rem",
+            flexWrap: "wrap",
             animation: "fadeUp 0.8s 0.8s both",
           }}
         >
@@ -188,7 +196,7 @@ export default function Hero() {
               <div
                 style={{
                   fontFamily: "'Syne', sans-serif",
-                  fontSize: "2rem",
+                  fontSize: "clamp(1.5rem, 4vw, 2rem)",
                   fontWeight: 800,
                   color: "var(--accent)",
                   letterSpacing: "-0.04em",
@@ -216,12 +224,10 @@ export default function Hero() {
 
       {/* ── RIGHT: 3D Desk Scene ── */}
       <div
+        className="hero-scene"
         style={{
           position: "relative",
           zIndex: 2,
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
           animation: "fadeIn 1.2s 0.3s both",
         }}
       >

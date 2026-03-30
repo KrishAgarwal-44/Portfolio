@@ -7,7 +7,7 @@ export default function Experience() {
   const inView = useInView(ref);
 
   return (
-    <section id="experience" ref={ref} style={{ padding: '8rem 4rem', background: 'var(--bg-2)' }}>
+    <section id="experience" ref={ref} className="section-pad" style={{ background: 'var(--bg-2)' }}>
       <div style={{ maxWidth: 1000, margin: '0 auto' }}>
         <div style={{
           marginBottom: '4rem',
@@ -17,13 +17,14 @@ export default function Experience() {
           <SectionTag>Experience</SectionTag>
           <h2 style={{
             fontFamily: "'Syne',sans-serif", fontWeight: 800,
-            fontSize: 'clamp(2rem,3.5vw,3rem)',
+            fontSize: 'clamp(1.8rem,3.5vw,3rem)',
             letterSpacing: '-0.03em', lineHeight: 1.05,
+            color: 'var(--text)',
           }}>
             Where I've{' '}
             <span style={{
               fontStyle: 'italic',
-              WebkitTextStroke: '1px rgba(232,255,107,0.5)',
+              WebkitTextStroke: '1.5px rgba(232,255,107,0.8)',
               color: 'transparent',
             }}>Worked</span>
           </h2>
@@ -56,7 +57,7 @@ function TimelineItem({ exp, index, inView }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         position: 'relative',
-        paddingLeft: '3rem',
+        paddingLeft: '2.5rem',
         paddingBottom: index < 2 ? '3.5rem' : 0,
         opacity: inView ? 1 : 0,
         transform: inView ? 'none' : 'translateX(-20px)',
@@ -77,8 +78,7 @@ function TimelineItem({ exp, index, inView }) {
       <div style={{
         background: hovered ? 'var(--bg-3)' : 'transparent',
         border: `1px solid ${hovered ? 'var(--border-2)' : 'transparent'}`,
-        padding: hovered ? '1.8rem' : '0',
-        marginLeft: hovered ? '-1rem' : '0',
+        padding: hovered ? '1.5rem' : '0',
         transition: 'all 0.3s',
       }}>
         {/* Header */}
@@ -88,8 +88,9 @@ function TimelineItem({ exp, index, inView }) {
         }}>
           <div>
             <h3 style={{
-              fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: '1.15rem',
+              fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: '1.1rem',
               letterSpacing: '-0.02em', marginBottom: '0.2rem',
+              color: 'var(--text)',
             }}>
               {exp.role}
             </h3>
@@ -121,8 +122,8 @@ function TimelineItem({ exp, index, inView }) {
             <span key={tag} style={{
               fontFamily: "'DM Mono',monospace", fontSize: '0.65rem',
               padding: '0.22rem 0.6rem',
-              background: 'rgba(232,255,107,0.05)',
-              border: '1px solid rgba(232,255,107,0.15)',
+              background: 'rgba(232,255,107,0.07)',
+              border: '1px solid rgba(232,255,107,0.2)',
               color: 'var(--accent)', letterSpacing: '0.04em',
             }}>{tag}</span>
           ))}
