@@ -138,22 +138,32 @@ export const EXPERIENCE_DATA = [
 
 export const CERTIFICATIONS_DATA = [
   {
+    title: "Cloud Infrastructure Foundations Associate",
+    issuer: "Oracle",
+    date: "2025",
+    icon: "☁️",
+    color: "#5dd8c0",
+    credentialUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=22F9F76A019F8E85EE4E7F33C1CCED8AF2025012411DA0EAB42CFBAD89F1125F",
+    tags: ["Cloud", "OCI", "Infrastructure"],
+    
+  },
+  {
+    title: "Software Engineer Intern",
+    issuer: "Hackerrank",
+    date: "2024",
+    icon: "💻",
+    color: "#5dd8c0",
+    credentialUrl:"https://www.hackerrank.com/certificates/iframe/181c4c73bf02",
+    tags: ["Software Engineering", "Internship"],
+  },
+  {
     title: "Java Foundation Course",
     issuer: "Oracle",
     date: "2024",
     icon: "☕",
     color: "#f89820",
-    credentialUrl: "#",
+    credentialUrl: "https://mylearn.oracle.com/ou/learning-path/java-explorer/79726",
     tags: ["Java", "OOP", "Core Java"],
-  },
-  {
-    title: "Cloud Infrastructure Foundations Associate",
-    issuer: "Oracle",
-    date: "2024",
-    icon: "☁️",
-    color: "#5dd8c0",
-    credentialUrl: "#",
-    tags: ["Cloud", "OCI", "Infrastructure"],
   },
   {
     title: "Prompt Engineering",
@@ -161,7 +171,7 @@ export const CERTIFICATIONS_DATA = [
     date: "2024",
     icon: "🤖",
     color: "#e066a0",
-    credentialUrl: "#",
+    credentialUrl: "https://learn.deeplearning.ai/accomplishments/282e59a1-4fcc-40c1-8e7c-daa190aa55ff",
     tags: ["AI", "LLMs", "Prompt Design"],
   },
 ];
