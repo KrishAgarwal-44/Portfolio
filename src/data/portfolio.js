@@ -150,7 +150,7 @@ export const CERTIFICATIONS_DATA = [
   {
     title: "Software Engineer Intern",
     issuer: "Hackerrank",
-    date: "2024",
+    date: "2025",
     icon: "💻",
     color: "#5dd8c0",
     credentialUrl:"https://www.hackerrank.com/certificates/iframe/181c4c73bf02",
@@ -159,7 +159,7 @@ export const CERTIFICATIONS_DATA = [
   {
     title: "Java Foundation Course",
     issuer: "Oracle",
-    date: "2024",
+    date: "2025",
     icon: "☕",
     color: "#f89820",
     credentialUrl: "https://mylearn.oracle.com/ou/learning-path/java-explorer/79726",

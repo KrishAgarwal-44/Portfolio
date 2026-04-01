@@ -116,6 +116,7 @@ body::after {
   display: flex;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* About layout */
@@ -253,6 +254,8 @@ body::after {
     height: 55vw;
     min-height: 260px;
     max-height: 380px;
+    overflow: hidden;
+    width: 100%;
   }
 
   /* About stacks */

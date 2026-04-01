@@ -40,7 +40,23 @@ export default function DeskScene() {
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFShadowMap;
     renderer.setClearColor(0x000000, 0);
+    renderer.domElement.style.display = 'block';
+    renderer.domElement.style.margin = '0';
+    renderer.domElement.style.padding = '0';
     el.appendChild(renderer.domElement);
+
+    /* Handle window resize */
+    const handleResize = () => {
+      if (!el) return;
+      const width = el.clientWidth;
+      const height = el.clientHeight;
+      if (width > 0 && height > 0) {
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+    };
+    window.addEventListener('resize', handleResize);
 
     /* ══════════════════════════════════════
        SCENE + CAMERA
@@ -505,17 +521,6 @@ export default function DeskScene() {
     window.addEventListener('mousemove', onMouseMove);
 
     /* ══════════════════════════════════════
-       RESIZE
-    ══════════════════════════════════════ */
-    const onResize = () => {
-      if (!el) return;
-      camera.aspect = el.clientWidth / el.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(el.clientWidth, el.clientHeight);
-    };
-    window.addEventListener('resize', onResize);
-
-    /* ══════════════════════════════════════
        ANIMATION LOOP
     ══════════════════════════════════════ */
     let frameId;
@@ -575,7 +580,7 @@ export default function DeskScene() {
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('resize', onResize);
+      window.removeEventListener('resize', handleResize);
       renderer.dispose();
       if (el.contains(renderer.domElement)) el.removeChild(renderer.domElement);
     };
@@ -589,6 +594,7 @@ export default function DeskScene() {
         height: '100%',
         minHeight: 520,
         position: 'relative',
+        overflow: 'hidden',
       }}
     />
   );
