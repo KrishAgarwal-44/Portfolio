@@ -60,7 +60,7 @@ export const SKILLS_DATA = [
     icon: "🛠️",
     name: "Tools & Technologies",
     desc: "Essential tools for development and version control.",
-    tags: ["Git", "GitHub", "Power BI"],
+    tags: ["Git", "GitHub", "Power BI", "Google AI Studio"],
   },
   {
     icon: "🧠",
@@ -137,12 +137,22 @@ export const EXPERIENCE_DATA = [
 ];
 
 export const CERTIFICATIONS_DATA = [
+   {
+    title: "Build & Deploy Apps with Google AI Studio",
+    issuer: "HCL GUVI",
+    date: "2026",
+    icon: "🤖",
+    color: "#e066a0",
+    credentialUrl: "https://www.guvi.in/share-certificate/n3T5z0N5CE707157O5",
+    tags: ["Google AI Studio", "App Development", "Cloud"],
+    
+  },
   {
     title: "Cloud Infrastructure Foundations Associate",
     issuer: "Oracle",
     date: "2025",
     icon: "☁️",
-    color: "#5dd8c0",
+    color: "#f89820",
     credentialUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=22F9F76A019F8E85EE4E7F33C1CCED8AF2025012411DA0EAB42CFBAD89F1125F",
     tags: ["Cloud", "OCI", "Infrastructure"],
     
@@ -152,7 +162,7 @@ export const CERTIFICATIONS_DATA = [
     issuer: "Hackerrank",
     date: "2025",
     icon: "💻",
-    color: "#5dd8c0",
+    color: "#6bffd4",
     credentialUrl:"https://www.hackerrank.com/certificates/iframe/181c4c73bf02",
     tags: ["Software Engineering", "Internship"],
   },
