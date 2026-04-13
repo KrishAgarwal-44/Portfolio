@@ -137,7 +137,16 @@ export const EXPERIENCE_DATA = [
 ];
 
 export const CERTIFICATIONS_DATA = [
-   {
+  {
+    title: "MongoDB Overview: Core Concepts and Architecture",
+    issuer: "MongoDB",
+    date: "2026",
+    icon: "🗄️",
+    color: "#13aa52",
+    credentialUrl: "https://www.credly.com/badges/9ce5dc14-5e5f-4f83-b0b5-d56c0b3c9011/public_url",
+    tags: ["MongoDB", "NoSQL", "Database Architecture", "Distributed Systems"],
+  },
+  {
     title: "Build & Deploy Apps with Google AI Studio",
     issuer: "HCL GUVI",
     date: "2026",
@@ -191,5 +200,6 @@ export const NAV_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
