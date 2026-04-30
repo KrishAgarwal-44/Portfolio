@@ -3,25 +3,25 @@ import * as THREE from 'three';
 
 /* ── Accent palette matching your CSS vars ── */
 const C = {
-  accent:   0xe8ff6b,
-  accent2:  0x5dd8c0,
-  accent3:  0xe066a0,
-  bg:       0x080810,
-  bg2:      0x0d0d1c,
-  bg3:      0x111128,
-  desk:     0x1a1428,
-  deskTop:  0x201830,
-  monitor:  0x0a0a14,
-  screen:   0x0a1a0a,
-  dim:      0x2a2a44,
-  dimmer:   0x16162a,
-  wood:     0x1e1530,
-  book1:    0xe8ff6b,
-  book2:    0x5dd8c0,
-  book3:    0xe066a0,
-  book4:    0x7b6bff,
-  lamp:     0x888899,
-  mug:      0x333355,
+  accent: 0xe8ff6b,
+  accent2: 0x5dd8c0,
+  accent3: 0xe066a0,
+  bg: 0x080810,
+  bg2: 0x0d0d1c,
+  bg3: 0x111128,
+  desk: 0x1a1428,
+  deskTop: 0x201830,
+  monitor: 0x0a0a14,
+  screen: 0x0a1a0a,
+  dim: 0x2a2a44,
+  dimmer: 0x16162a,
+  wood: 0x1e1530,
+  book1: 0xe8ff6b,
+  book2: 0x5dd8c0,
+  book3: 0xe066a0,
+  book4: 0x7b6bff,
+  lamp: 0x888899,
+  mug: 0x333355,
 };
 
 export default function DeskScene() {
@@ -100,10 +100,10 @@ export default function DeskScene() {
     /* ══════════════════════════════════════
        HELPERS
     ══════════════════════════════════════ */
-    const mat  = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, ...opts });
-    const box  = (w, h, d)          => new THREE.BoxGeometry(w, h, d);
-    const cyl  = (rt, rb, h, s)     => new THREE.CylinderGeometry(rt, rb, h, s || 16);
-    const mesh = (geo, material)    => new THREE.Mesh(geo, material);
+    const mat = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, ...opts });
+    const box = (w, h, d) => new THREE.BoxGeometry(w, h, d);
+    const cyl = (rt, rb, h, s) => new THREE.CylinderGeometry(rt, rb, h, s || 16);
+    const mesh = (geo, material) => new THREE.Mesh(geo, material);
 
     function addMesh(geo, material, x, y, z, rx = 0, ry = 0, rz = 0) {
       const m = mesh(geo, material);
@@ -163,7 +163,7 @@ export default function DeskScene() {
 
     /* Desk side panels */
     addMesh(box(0.06, 0.85, 0.9), mat(C.dimmer), -2.15, 0.42, 0);
-    addMesh(box(0.06, 0.85, 0.9), mat(C.dimmer),  2.15, 0.42, 0);
+    addMesh(box(0.06, 0.85, 0.9), mat(C.dimmer), 2.15, 0.42, 0);
 
     /* ══════════════════════════════════════
        MONITOR
@@ -197,12 +197,12 @@ export default function DeskScene() {
     });
 
     const codeLines = [
-      { w: 0.6,  x: -0.35, y: 1.85, c: 0xe8ff6b, i: 0.8 },
-      { w: 0.9,  x: -0.15, y: 1.72, c: 0x5dd8c0, i: 0.6 },
-      { w: 0.5,  x: -0.45, y: 1.59, c: 0xa8a8c8, i: 0.3 },
-      { w: 0.75, x: -0.1,  y: 1.46, c: 0xe066a0, i: 0.7 },
-      { w: 0.4,  x: -0.5,  y: 1.33, c: 0x5dd8c0, i: 0.5 },
-      { w: 0.65, x: -0.3,  y: 1.20, c: 0xe8ff6b, i: 0.4 },
+      { w: 0.6, x: -0.35, y: 1.85, c: 0xe8ff6b, i: 0.8 },
+      { w: 0.9, x: -0.15, y: 1.72, c: 0x5dd8c0, i: 0.6 },
+      { w: 0.5, x: -0.45, y: 1.59, c: 0xa8a8c8, i: 0.3 },
+      { w: 0.75, x: -0.1, y: 1.46, c: 0xe066a0, i: 0.7 },
+      { w: 0.4, x: -0.5, y: 1.33, c: 0x5dd8c0, i: 0.5 },
+      { w: 0.65, x: -0.3, y: 1.20, c: 0xe8ff6b, i: 0.4 },
     ];
     codeLines.forEach(({ w, x, y, c, i }) => {
       addMesh(box(w, 0.028, 0.005), lineMat(c, i), x, y, -0.158);
@@ -316,10 +316,10 @@ export default function DeskScene() {
       { w: 0.07, h: 0.35, c: C.book2, x: -1.99, y: 2.1 },
       { w: 0.11, h: 0.44, c: C.book3, x: -1.87, y: 2.15 },
       { w: 0.08, h: 0.38, c: C.book4, x: -1.75, y: 2.12 },
-      { w: 0.1,  h: 0.40, c: C.book1, x: -1.64, y: 2.13 },
+      { w: 0.1, h: 0.40, c: C.book1, x: -1.64, y: 2.13 },
       { w: 0.07, h: 0.36, c: C.book2, x: -1.53, y: 2.11 },
 
-      { w: 0.09, h: 0.32, c: C.book3, x: -2.1,  y: 1.54 },
+      { w: 0.09, h: 0.32, c: C.book3, x: -2.1, y: 1.54 },
       { w: 0.11, h: 0.38, c: C.book4, x: -1.98, y: 1.57 },
       { w: 0.08, h: 0.30, c: C.book1, x: -1.86, y: 1.53 },
       { w: 0.10, h: 0.36, c: C.book2, x: -1.75, y: 1.56 },
@@ -444,9 +444,9 @@ export default function DeskScene() {
     ══════════════════════════════════════ */
     const FLOAT_COUNT = 40;
     const floatPositions = new Float32Array(FLOAT_COUNT * 3);
-    const floatSpeeds   = new Float32Array(FLOAT_COUNT);
+    const floatSpeeds = new Float32Array(FLOAT_COUNT);
     for (let i = 0; i < FLOAT_COUNT; i++) {
-      floatPositions[i * 3]     = (Math.random() - 0.5) * 1.6;
+      floatPositions[i * 3] = (Math.random() - 0.5) * 1.6;
       floatPositions[i * 3 + 1] = 1.0 + Math.random() * 1.5;
       floatPositions[i * 3 + 2] = (Math.random() - 0.5) * 0.6 - 0.2;
       floatSpeeds[i] = 0.003 + Math.random() * 0.005;
@@ -515,8 +515,8 @@ export default function DeskScene() {
 
     const onMouseMove = (e) => {
       const rect = el.getBoundingClientRect();
-      mouse.x = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
-      mouse.y = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+      mouse.x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      mouse.y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
     };
     window.addEventListener('mousemove', onMouseMove);
 
@@ -556,7 +556,7 @@ export default function DeskScene() {
         fp[i * 3 + 1] += floatSpeeds[i];
         /* Fade opacity by y — handled via single opacity, reset pos */
         if (fp[i * 3 + 1] > 2.8) {
-          fp[i * 3]     = (Math.random() - 0.5) * 1.6;
+          fp[i * 3] = (Math.random() - 0.5) * 1.6;
           fp[i * 3 + 1] = 1.0;
           fp[i * 3 + 2] = (Math.random() - 0.5) * 0.6 - 0.2;
         }

@@ -7,7 +7,7 @@ export const HERO_DATA = {
   cta: { label: "View My Work", href: "#projects" },
   resume: {
     label: "Download CV",
-    href: "https://drive.google.com/file/d/1kVuM0XIRmiI68ey5wlLxQJcbnc4EFfF_/view?usp=drivesdk",
+    href: "https://drive.google.com/file/d/1TwZig0MJZgxgNrOCRFodqF4bFQvreWzs/view?usp=drive_link",
   },
   stats: [
     { num: "2+", label: "Years Exp." },
