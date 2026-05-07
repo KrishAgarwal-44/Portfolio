@@ -158,7 +158,7 @@ export const CERTIFICATIONS_DATA = [
     icon : "🤖",
     color : "#e066a0",
     credentialUrl: "https://verify.skilljar.com/c/miak42o5ppet",
-    tags: ["Claude 101", "Anthropic", "AI"],
+    tags: ["Claude AI", "Generative AI", "LLMs", "Prompt Engineering", "AI Applications", "Natural Language Processing"],
   },
   {
     title: "MongoDB Overview: Core Concepts and Architecture",
