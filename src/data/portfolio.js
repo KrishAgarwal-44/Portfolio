@@ -150,6 +150,16 @@ export const EXPERIENCE_DATA = [
 ];
 
 export const CERTIFICATIONS_DATA = [
+
+  {
+    title : "Claude 101",
+    issuer : "Anthropic",
+    date : "2026",
+    icon : "🤖",
+    color : "#e066a0",
+    credentialUrl: "https://verify.skilljar.com/c/miak42o5ppet",
+    tags: ["Claude 101", "Anthropic", "AI"],
+  },
   {
     title: "MongoDB Overview: Core Concepts and Architecture",
     issuer: "MongoDB",
