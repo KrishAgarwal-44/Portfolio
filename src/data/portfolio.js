@@ -152,6 +152,16 @@ export const EXPERIENCE_DATA = [
 export const CERTIFICATIONS_DATA = [
 
   {
+    title: "AI Fluency: Framework & Foundations",
+    issuer: "Anthropic",
+    date: "2026",
+    icon: "🤖",
+    color: "#e066a0",
+    credentialUrl:"https://verify.skilljar.com/c/u3dyu3wfi2wf",
+    tags: ["AI Foundations", "Generative AI", "Claude AI", "LLMs", "AI Framework"],
+  },
+
+  {
     title : "Claude 101",
     issuer : "Anthropic",
     date : "2026",
