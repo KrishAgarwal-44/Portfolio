@@ -25,7 +25,7 @@ export const ABOUT_DATA = {
   ],
   facts: [
     "Based in Jaipur, Rajasthan",
-    "B.Tech CSE (Data Science) — GPA 8.03",
+    "B.Tech CSE (Data Science) — CGPA 8.3/10",
     "Senior Secondary — 80.20%",
     "Open to on-site & remote roles",
   ],
